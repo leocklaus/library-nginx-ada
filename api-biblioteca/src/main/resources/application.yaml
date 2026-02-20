@@ -28,3 +28,12 @@ security:
   jwt:
     secret: "chave-super-secreta-para-desenvolvimento"
     expiration-minutes: 60
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info,metrics"
+  endpoint:
+    health:
+      show-details: always

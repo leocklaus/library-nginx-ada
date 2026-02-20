@@ -49,6 +49,7 @@ public class SecurityConfig {
                         .requestMatchers("/libraries").permitAll()
                         .requestMatchers("/auth/login").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/actuator/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(
